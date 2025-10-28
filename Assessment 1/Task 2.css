@@ -1,0 +1,352 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: "Lato", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    background-color: #231651;
+    margin: 0;
+    gap: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.button br {
+    display: none;
+}
+
+.box1, .box2, .box3, .box4, .box5, .box6{
+    background: #070410;
+    color: #FFF;
+    display: grid;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+}
+
+.description{
+   margin: 16px;
+   color: #FFFFFF;
+   font-size: 1.5em;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    line-height: 1;
+    text-align: left;
+    font-family: "Teko", sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+    color: #EEF36A;
+}
+
+.container{
+    width: 100%;
+    max-width: 1100px;
+    display: grid;
+    gap: 16px;                 
+    padding: 0;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    align-items: start;
+    justify-items: center;
+    grid-auto-rows: auto; 
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: #070410;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    width: 100vw;
+}
+
+.container img{
+    width: 100%;      
+    object-fit: cover;     
+    margin: 0;
+    border: black solid;
+    font-size: 1.5em;
+}
+
+.header a{
+    font-family: "Teko", sans-serif;
+    display: none;
+}
+
+.headings {
+    font-family: "Teko", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 2em;
+    text-align: center;
+    margin: 16px;
+    color: #FFFFFF;
+}
+
+.button{
+    padding: 16px;
+    border-radius: 16px;
+    background-color: #4DCCBD;
+    display: flex;
+    justify-self: center;
+    font-weight: 900;
+    font-size: 2em;
+    margin: 16px;
+    gap: 16px;
+    align-self: center;
+}
+
+.search_button{
+    padding: 16px;
+    border-radius: 16px;
+    background-color: #4DCCBD;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 900;
+    font-size: 2em;
+}
+
+footer{
+    padding: 16px;
+}
+
+.other{
+    max-width: 100%;
+    height: auto;
+    border: solid #000;
+    box-sizing: border-box;
+}
+
+@media screen and (min-width: 720px){
+    .header a{
+        display: inline-flex;
+        font-size: 3em;
+        color: #FFFFFF;
+        font-weight: 100;
+        gap: 32px;
+        margin: 0;
+        white-space: nowrap;
+    }
+
+    .logo, .search_button{
+        margin: 0;
+        flex: 0 0 auto;
+        font-weight: 900;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        padding: 16px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .container{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 32px;
+        gap: 32px;
+        align-items: stretch;
+    }
+
+    .container > * {
+        width: 100%;
+    }
+
+    .headings{
+        margin: 32px;
+    }
+
+    .header a + .header a {
+        margin-left: 32px; /* preserve the large spacing between nav options */
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .logo, .search_button{
+        font-size: 3em;
+    }
+
+    .header a{
+        gap: 48px;
+    }
+
+    .header {
+        padding: 16px 48px;
+        justify-content: space-between;
+    }
+
+    .logo {
+        font-size: 3em;
+    }
+
+    .header a {
+        display: inline-flex;
+        font-size: 2em;
+        color: #FFFFFF;
+        font-weight: 400;
+        margin: 0 24px;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .header a:hover {
+        color: #4DCCBD;
+    }
+
+    .search_button {
+        font-size: 2em;
+        padding: 16px 24px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .search_button:hover {
+        background-color: #EEF36A;
+        color: #070410;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 900px;
+        margin: 0 auto;
+        gap: 48px;
+        padding: 0;
+    }
+
+    .box1 {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr; 
+        align-items: center;
+        gap: 32px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
+    .box1 img {
+        grid-column: 1 / -1;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border: solid #000;
+    }
+
+    .box1 .headings{
+        grid-column: 1;
+        margin: 16px 16px 0 16px;
+        padding: 16px 16px 0 16px;
+    }
+
+    .box1 .description{
+        grid-column: 1;
+        text-align: left;
+        margin: 0;
+        padding: 0 16px 16px 16px;
+    }
+
+    .box1 .button{
+        display: flex;
+        flex-direction: column;
+        justify-self: stretch;
+        justify-content: center;
+        align-self: stretch;
+        text-align: center;
+    }
+
+    .button br {
+        display: inline; /* or block if you want full vertical separation */
+    }
+
+    .box2, .box3{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 16px;
+        background: #070410;
+        color: #FFFFFF;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        border-radius: 8px;
+    }
+
+    .box2 img {
+        width: fit-content;
+        height: auto;
+        object-fit: cover;
+        border: solid #000;
+    }
+
+    .box4, .box5, .box6{
+        grid-column: 1 /span 2;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 32px;
+        padding: 16px;
+        box-sizing: border-box;
+    }
+
+    .box4 img, .box5 img, .box6 img{
+        grid-column: 1;
+        grid-row: auto/span 3;
+        width: fit-content;
+    }
+
+    .box4 .headings, .box5 .headings, .box6 .headings,
+    .box4 .description, .box5 .description, .box6 .description
+    {
+        grid-column: 2;
+    }
+
+    .box4 .button, .box5 .button, .box6 .button{
+        grid-column: 2;
+        display: flex;
+        flex-direction: column;
+        justify-self: stretch;
+        align-self: stretch;
+        text-align: center;
+    }
+
+    .button{
+        display: flex;
+        flex-direction: column;
+        align-self: stretch;
+        text-align: center;
+    }
+
+    .headings {
+        font-family: "Teko", sans-serif;
+        font-size: 2em;
+        font-weight: 700;
+        color: #FFFFFF;
+        margin: 0;
+        text-align: left;
+    }
+
+    .description {
+        font-family: "Lato", sans-serif;
+        line-height: 1.4;
+        margin: 0;
+        text-align: left;
+    }
+}

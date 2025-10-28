@@ -1,0 +1,245 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    background-color: lightgray;
+    margin: 0;
+    gap: 0;
+    padding: 0;
+}
+
+.author-pic{
+    display: flex;
+    size: 200px;
+    width: 200px;
+    margin: auto;
+    padding: 12px;
+    clip-path: circle(40%);
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 12px 0;
+    text-align: center;
+}
+
+.logo img{
+    display: block;
+    width: 80px;
+    max-width: 100%;
+    height: auto;
+}
+
+.gallery{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;                 /* remove grid gaps */
+    padding: 0;
+    margin: 0;
+    align-items: stretch;
+    justify-items: stretch;
+    grid-auto-rows: auto;  /* fixed row height (adjust as needed) */
+}
+
+.gallery img{
+    width: 100%;
+    height: 100%;          /* fill row height */
+    object-fit: cover;     /* crop to fully cover cell */
+    margin: 0;
+    border: black solid
+}
+
+header {
+    display: flex;
+    text-align: center;
+    margin: 12px;
+    justify-content: space-evenly;
+    font-size: 1.5em;
+    gap: 2em;
+}
+
+.headings {
+    font-family: "Protest Guerrilla", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5em;
+    text-align: center;
+    margin: 12px;
+}
+
+.content{
+    background-color: white;
+    border: black solid;
+    padding: 12px;
+    gap: 12px;
+}
+
+footer{
+    background-color: #14181d;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    font-size: 1.5  em;
+}
+
+.other{
+    max-width: 100%;
+    height: auto;
+    border: solid #000;
+    box-sizing: border-box;
+}
+
+.desktop-only{
+    display: none;
+}
+
+.body-text{
+    font-size: 26px;
+}
+
+.intro-text{
+    font-size: 26px;
+}
+
+@media screen and (min-width: 540px){
+    .author-pic{
+        padding: 20px;
+    }
+
+    .headings{
+        margin: 20px;
+    }
+
+    .content{
+        padding: 20px;
+        gap: 20px;
+    }
+
+    footer{
+        padding: 20px;
+    }
+
+    header{ 
+        margin: 20px;
+    }
+}
+
+@media screen and (min-width: 719px){
+    body{
+        background: lightgray;
+        gap: 30px;
+        margin: 30px;
+        padding-inline: 30px;
+    }
+
+    .gallery{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0;
+        gap: 0;
+    }
+
+    .other{
+        width: 100%;
+    }
+
+    .author-pic{
+        padding: 30px;
+    }
+
+    .headings{
+        margin: 30px;
+    }
+
+    .content{
+        padding: 30px;
+        gap: 30px;
+    }
+
+    footer{
+        padding: 30px;
+    }
+
+    header{
+        margin: 30px;
+    }
+}
+
+@media screen and (min-width: 1025px){
+    body{
+        background: lightgray;
+        gap: 50px;
+        margin: 50px;
+        padding-inline: 50px;
+    }
+
+    .gallery{
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+        grid-auto-rows: auto; /* same row height for consistent layout */
+    }
+
+    .other{
+        width: 100%;
+        gap: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    .author-pic{
+        padding: 50px;
+        size: 200px;
+        width: 50%;
+    }
+
+    .headings{
+        margin: 50px;
+    }
+
+    .content{
+        padding: 50px;
+        gap: 50px;
+    }
+
+    footer{
+        padding: 50px;
+    }
+
+    header{
+        margin: 50px;
+    }
+
+    .desktop-only{
+        display: block;
+        border: black solid;
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 2;
+    }
+
+    .desktop-only img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .logo{
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: auto;
+    text-align: center;
+    }
+
+    .logo img{
+        width: 200px;
+    }
+}
